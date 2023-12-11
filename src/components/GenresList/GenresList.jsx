@@ -31,13 +31,15 @@ const GenresList = () => {
   }, []);
 
   return (
-    <div>
-      <h2 className={classes.text}>Movie Genres</h2>
-      <ul>
+    <div className={classes.container}>
+    <div className={classes.wrapper}>
+      <h1 className={`${classes.color} ${classes.title}`}>Movie Genres</h1>
+      <ul className={classes.lists}>
         {data.map((genre) => (
-          <li className={classes.text} key={genre.id}>{genre.name}</li>
+          <li className={`${classes.color} ${classes.items}`} key={genre.id}>{genre.name}</li>
         ))}
       </ul>
+    </div>
     </div>
   );
 };
