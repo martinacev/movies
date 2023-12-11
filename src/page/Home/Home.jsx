@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ListMovies from "../../components/ListMovies/ListMovies";
 import classes from "./home.module.css";
 import Spinner from "../../components/Spinner/Spinner";
+import GenresList from "../../components/GenresList/GenresList";
 
 export default function HomePage() {
 	const API_KEY = import.meta.env.VITE_API_KEY;
@@ -33,6 +34,7 @@ export default function HomePage() {
 
 	return (
 		<div className={classes.container}>
+			<GenresList />
 			<ListMovies movies={data} />
 		</div>
 	);
