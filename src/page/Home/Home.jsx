@@ -3,6 +3,10 @@ import ListMovies from "../../components/ListMovies/ListMovies";
 import classes from "./home.module.css";
 import Spinner from "../../components/Spinner/Spinner";
 import GenresList from "../../components/GenresList/GenresList";
+import Header from "../../components/Header/Header";
+import TheMovie from "../../components/TheMovie/TheMovie";
+
+
 
 export default function HomePage() {
 	const API_KEY = import.meta.env.VITE_API_KEY;
@@ -25,7 +29,7 @@ export default function HomePage() {
 		};
 
 		fetchData();
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line react-hooks/exhaustive-deps 
 	}, []);
 
 	if (isLoading) {
@@ -34,8 +38,12 @@ export default function HomePage() {
 
 	return (
 		<div className={classes.container}>
+			<Header />
+			<div className={classes.wrapper}>
 			<GenresList />
 			<ListMovies movies={data} />
+			<TheMovie />
+			</div>
 		</div>
 	);
 }

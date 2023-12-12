@@ -3,6 +3,7 @@ import classes from "./listMovies.module.css";
 
 export default function ListMovies({ movies }) {
 	return (
+		<div className={classes.wrapper}>
 		<ul className={classes.container}>
 			{movies.map((movie) => {
 				return (
@@ -16,5 +17,6 @@ export default function ListMovies({ movies }) {
 				);
 			})}
 		</ul>
+		</div>
 	);
 }

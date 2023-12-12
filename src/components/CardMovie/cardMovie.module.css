@@ -35,5 +35,6 @@
 }
 
 .text {
+    display: flex;
     color: white;
 }

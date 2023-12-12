@@ -1,0 +1,6 @@
+.container {
+    display: flex;
+    width: 50%;
+    border: 1px solid orange;
+    margin-right: 20px;
+}
