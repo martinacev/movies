@@ -38,12 +38,7 @@ body {
 	padding: 0;
 	margin: 0;
 
-	background-image: url('/movies.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-
-	backdrop-filter: blur(3px);
+	position: relative;
 	
 }
 

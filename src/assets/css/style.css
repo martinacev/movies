@@ -1,0 +1,14 @@
+.bgimage {
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    background-image: url('/public/movies.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	filter: blur(2px);
+    z-index: -1;
+    scale: 1.2;
+}
