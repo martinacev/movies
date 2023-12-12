@@ -3,7 +3,7 @@ import classes from '../TheMovie/theMovie.module.css';
 const TheMovie = () => {
     return (
         <div className={classes.container}>
-            <span>Here will be the Moive</span>
+            <h2 className={classes.colorPrivremeno}>Here will be the Moive</h2>
         </div>
     )
 }

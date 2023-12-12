@@ -1,8 +1,9 @@
 .container{
     display: flex;
-    justify-content: start;
-    gap: 10px;
+    justify-content: center;
+    gap: 17px;
     flex-wrap: wrap;
+    height: 900px;
 }
 
 .wrapper {

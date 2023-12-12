@@ -25,3 +25,14 @@
 .image {
     width: 50px;
 }
+
+.btn {
+    background-color: rgb(255, 0, 0);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.favorite {
+    width: 30px;
+}
