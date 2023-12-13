@@ -1,7 +1,15 @@
 import classes from '../TheMovie/theMovie.module.css';
 import favorite from '../../../public/favorite.png';
+import { useState } from 'react';
 
 const TheMovie = ({ selectedMovie }) => {
+   const [isFavoriteClicked, setIsFavoriteClicked] = useState(false);
+
+   const handleClickFavorite = () => {
+    setIsFavoriteClicked(!isFavoriteClicked);
+   }
+
+   
   return (
     <div>
       {selectedMovie && (
@@ -13,7 +21,7 @@ const TheMovie = ({ selectedMovie }) => {
             />
           <h3>{selectedMovie.title}</h3>
           <p>{selectedMovie.overview}</p>
-          <div className={classes.favorite}>
+          <div onClick={handleClickFavorite} className={`${classes.favorite} ${isFavoriteClicked ? classes.favoriteClicked : ''}`}>
             <img src={favorite} alt="favorite" />
           </div>
         </div>
