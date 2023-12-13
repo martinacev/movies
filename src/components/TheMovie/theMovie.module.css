@@ -1,10 +1,23 @@
-.container {
-    display: flex;
-    width: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.466);
+.wrapper {
+    border: 1px solid red;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.315);
+    width: 450px;
     margin-right: 20px;
 }
 
-.colorPrivremeno {
-    color: white;
+.movieImage {
+   width: 100%
+}
+
+.favorite {
+    background-color: rgba(128, 128, 128, 0.315);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    display: flex;
+    justify-content: center;
 }
