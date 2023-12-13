@@ -22,7 +22,7 @@ const TheMovie = ({ selectedMovie }) => {
           <h3>{selectedMovie.title}</h3>
           <p>{selectedMovie.overview}</p>
           <div onClick={handleClickFavorite} className={`${classes.favorite} ${isFavoriteClicked ? classes.favoriteClicked : ''}`}>
-            <img src={favorite} alt="favorite" />
+            <img className={classes.image} src={favorite} alt="favorite" />
           </div>
         </div>
       )}
