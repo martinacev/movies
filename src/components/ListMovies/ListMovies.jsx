@@ -1,5 +1,5 @@
 import  { useState, useEffect } from 'react';
-import CardMovie from '../CardMovie/CardMovie';
+import CardMovie from '../CardMovie/cardMovie';
 import TheMovie from '../TheMovie/TheMovie';
 import classes from './listMovies.module.css';
 

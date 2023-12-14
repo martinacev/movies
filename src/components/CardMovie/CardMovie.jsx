@@ -7,7 +7,7 @@ export default function CardMovie({ title, description, image }) {
 	const displayDescription = description.length > maxChars ? `${description.substring(0, maxChars)}...` : description;
 
 	return (
-		<div className={classes.wrapper}>
+		<div className={classes.wrapper} >
 			<img className={classes.avatar} src={image} />
 			<div className={classes.informations}>
 			<h4 className={classes.name}>{title}</h4>
