@@ -1,6 +1,6 @@
 import classes from '../Header/header.module.css';
 import star from '/star.png'
-import favorite from '/public/favorite.png'
+import favorite from '/favorite.png'
 
 const Header = () => {
 
