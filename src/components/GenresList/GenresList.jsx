@@ -76,7 +76,7 @@ const GenresList = () => {
       </div>
 
       {selectedGenre && (
-        <div className={classes.moviesContainer}>
+        <div>
           <h2>Movies in {data.find(title => title.id === selectedGenre)?.name} genre</h2>
           <div className={classes.movieList}>
             {movies.map((movie) => (
