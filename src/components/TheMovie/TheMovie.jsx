@@ -1,5 +1,5 @@
 import classes from '../TheMovie/theMovie.module.css';
-import favorite from '../../../public/favorite.png';
+import favorite from '/favorite.png';
 import { useState } from 'react';
 
 const TheMovie = ({ selectedMovie }) => {
@@ -8,7 +8,6 @@ const TheMovie = ({ selectedMovie }) => {
    const handleClickFavorite = () => {
     setIsFavoriteClicked(!isFavoriteClicked);
    }
-
    
   return (
     <div>

@@ -7,7 +7,6 @@ import Header from "../../components/Header/Header";
 import TheMovie from "../../components/TheMovie/TheMovie";
 
 
-
 export default function HomePage() {
 	const API_KEY = import.meta.env.VITE_API_KEY;
 	const [data, setData] = useState([]);
@@ -29,8 +28,9 @@ export default function HomePage() {
 		};
 
 		fetchData();
-		// eslint-disable-next-line react-hooks/exhaustive-deps 
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
+
 
 	if (isLoading) {
 		return <Spinner />;
@@ -38,11 +38,11 @@ export default function HomePage() {
 
 	return (
 		<div className={classes.container}>
-			<Header />
+			<Header  />
 			<div className={classes.wrapper}>
-			<GenresList />
-			<ListMovies movies={data} />
-			<TheMovie />
+				<GenresList setMovies={setData}/>
+				<ListMovies movies={data} />
+				<TheMovie />
 			</div>
 		</div>
 	);
