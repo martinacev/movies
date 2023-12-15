@@ -5,14 +5,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 function App() {
-	
 	return (
 	<>
 	<div className="bgimage"></div>
 	<BrowserRouter>
 	<Routes>
 		<Route index element={<HomePage />} />
-		<Route path='/home' element={<HomePage />} />
+		<Route path='/' element={<HomePage />} />
 		<Route path='/favorites' element={<Favorites />}/>
 	</Routes>
 	</BrowserRouter>
