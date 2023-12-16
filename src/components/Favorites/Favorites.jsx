@@ -11,13 +11,34 @@ const Favorites = () => {
 		navigate("/");
 	};
 
+	const truncateText = (text, maxLength) => {
+		if (text.length <= maxLength) {
+			return text;
+		} else {
+			return text.substring(0, maxLength) + "...";
+		}
+	};
+
 	return (
 		<div className={classes.container}>
-			<h2>Your Favorite Movies</h2>
-			<button onClick={handleBackClick}>Back</button>
-			<ul>
+			<div className={classes.title}>
+				<h2>Your Favorite Movies</h2>
+				<button className={classes.btn} onClick={handleBackClick}>
+					Back
+				</button>
+			</div>
+			<ul className={classes.wrapper}>
 				{favoriteMovies.map((movie, index) => (
-					<li key={`${movie.id}-${index}`}>{movie.title}</li>
+					<li className={classes.card} key={`${movie.id}-${index}`}>
+						<img
+							src={`https://image.tmdb.org/t/p/original/${movie.img}`}
+							className={classes.movieImage}
+						/>
+						<div className={classes.informations}>
+							<h3>{movie.title}</h3>
+							<p>{truncateText(movie.text, 150)}</p>
+						</div>
+					</li>
 				))}
 			</ul>
 		</div>

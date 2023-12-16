@@ -12,6 +12,8 @@ const TheMovie = ({ selectedMovie }) => {
 			addToFavorites({
 				title: selectedMovie.title,
 				id: selectedMovie.id,
+				img: selectedMovie.poster_path,
+				text: selectedMovie.overview
 			})
 		);
 	};

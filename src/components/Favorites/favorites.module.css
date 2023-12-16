@@ -1,4 +1,63 @@
 .container {
     display: flex;
+    flex-direction: column;
     color: white;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.movieImage {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+   
+    border: 1px solid red;
+    color: white;
+    border-radius: 20px;
+    background-color: rgba(128, 128, 128, 0.315);
+    width: 250px;
+    margin-right: 20px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.informations {
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
 }
