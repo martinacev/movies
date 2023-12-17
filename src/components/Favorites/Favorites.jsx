@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import classes from "../Favorites/favorites.module.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { removeFromFavorites } from "../redux/actions";
 
 const Favorites = () => {
 	const favoriteMovies = useSelector((state) => state.favorites);
+	const dispatch = useDispatch();
 
 	const navigate = useNavigate();
 
@@ -19,13 +21,17 @@ const Favorites = () => {
 		}
 	};
 
+	const handleRemoveClick = (movieId) => {
+		dispatch(removeFromFavorites(movieId));
+	};
+
 	return (
 		<div className={classes.container}>
 			<div className={classes.title}>
+				<div className={classes.btn} onClick={handleBackClick}>
+				↩ 
+				</div>
 				<h2>Your Favorite Movies</h2>
-				<button className={classes.btn} onClick={handleBackClick}>
-					Back
-				</button>
 			</div>
 			<ul className={classes.wrapper}>
 				{favoriteMovies.map((movie, index) => (
@@ -37,6 +43,12 @@ const Favorites = () => {
 						<div className={classes.informations}>
 							<h3>{movie.title}</h3>
 							<p>{truncateText(movie.text, 150)}</p>
+							<div
+								onClick={() => handleRemoveClick(movie.id)}
+								className={classes.remove}
+							>
+								❌
+							</div>
 						</div>
 					</li>
 				))}

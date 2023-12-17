@@ -1,11 +1,11 @@
 const initialState = {
 	favorites: [],
+
 };
 
 const rootReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case "ADD_TO_FAVORITES": {
-			// Check if the payload object's id is not already in favorites
 			if (!state.favorites.some((obj) => obj.id === action.payload.id)) {
 				return {
 					...state,
@@ -13,6 +13,15 @@ const rootReducer = (state = initialState, action) => {
 				};
 			}
 			return state;
+		}
+
+		case "REMOVE_FROM_FAVORITES": {
+			return {
+				...state,
+				favorites: state.favorites.filter(
+					(movie) => movie.id !== action.payload
+				),
+			};
 		}
 
 		default:
