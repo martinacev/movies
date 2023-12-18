@@ -38,7 +38,7 @@ export default function HomePage() {
 
 	return (
 		<div className={classes.container}>
-			<Header  />
+			<Header setSearch={setData} />
 			<div className={classes.wrapper}>
 				<GenresList setMovies={setData}/>
 				<ListMovies movies={data} />
