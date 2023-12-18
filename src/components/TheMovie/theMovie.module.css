@@ -25,6 +25,10 @@
     margin-top: 10px;
 }
 
+.favoriteHover{
+    background-color: red;
+}
+
 .favoriteClicked {
     background-color: red;
 }
