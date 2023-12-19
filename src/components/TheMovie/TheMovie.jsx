@@ -6,6 +6,7 @@ import favorite from '/favorite.png';
 const TheMovie = ({ selectedMovie }) => {
   const dispatch = useDispatch();
   const favorites = useSelector((state) => state.favorites);
+  
   const isFavorite = favorites.some((movie) => movie === selectedMovie);
 
   const handleClickFavorite = () => {
@@ -34,12 +35,12 @@ const TheMovie = ({ selectedMovie }) => {
           />
           <h3>{selectedMovie.title}</h3>
           <p>{selectedMovie.overview}</p>
-           <div
+           <button
             onClick={handleClickFavorite}
             className={`${classes.favorite} ${isFavorite ? classes.favoriteActive : ''}`}
           >
             <img className={classes.image} src={favorite} alt="favorite" />
-          </div>
+          </button>
         </div>
       )}
     </div>

@@ -15,7 +15,6 @@ const Header = ({ setSearch }) => {
   };
 
   useEffect(() => {
-    // Your existing useEffect code here
   }, [searchQuery, setSearch]);
 
   const handleFavoritesClick = () => {
