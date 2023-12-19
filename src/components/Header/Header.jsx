@@ -15,8 +15,34 @@ const Header = ({ setSearch }) => {
   };
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const API_KEY = import.meta.env.VITE_API_KEY;
+      
+        if (searchQuery.trim() === '') {
+          return;
+        }
+  
+        const options = {
+          method: 'GET',
+          headers: {
+            accept: 'application/json',
+          },
+        };
+  
+        const response = await fetch(
+          `https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&api_key=${API_KEY}&query=${searchQuery}`,
+          options
+        );
+        const data = await response.json();
+        setSearch(data.results);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+  
+    fetchData();
   }, [searchQuery, setSearch]);
-
   const handleFavoritesClick = () => {
     navigate('/favorites');
   };
