@@ -7,12 +7,17 @@ import favorite from '/favorite.png';
 
 const Header = ({ setSearch }) => {
   const [searchQuery, setSearchQuery] = useState('');
-  const navigate = useNavigate();
   const favorites = useSelector((state) => state.favorites);
 
   const handleInputChange = (e) => {
     setSearchQuery(e.target.value);
   };
+
+  const navigate = useNavigate();
+
+  const handleClickButton = () => {
+   window.location.reload();
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -50,7 +55,7 @@ const Header = ({ setSearch }) => {
   return (
     <div className={classes.header}>
       <div className={classes.logo}>
-        <img className={classes.image} src={star} alt="logo" />
+        <img onClick={handleClickButton} className={classes.image} src={star} alt="logo" />
       </div>
       <div>
         <input
