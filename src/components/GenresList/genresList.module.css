@@ -28,7 +28,7 @@
 .items:hover {
 color: rgb(255, 0, 0);
 transform: scale(1.2) translateX(2.3em);
-transition: transform 0.1s ease-out; 
+transition: transform 0.8s ease-out; 
 }
 
 .items {
